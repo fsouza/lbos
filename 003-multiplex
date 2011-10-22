@@ -1,0 +1,4 @@
+Thread A            Thread B            Thread C            Thread D
+multiplex.wait()    multiplex.wait()    multiplex.wait()    multiplex.wait()
+count++             count++             count++             count++
+multiplex.signal()  multiplex.signal()  multiplex.signal()  multiplex.signal()
