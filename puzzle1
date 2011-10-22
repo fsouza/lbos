@@ -1,0 +1,5 @@
+Thread A            Thread B
+a1                  b1
+a1Done.signal()     b1Done.signal()
+b1Done.wait()       a1Done.wait()
+a2                  b2
