@@ -1,0 +1,4 @@
+Thread A            Thread B
+mutex.wait()        mutex.wait()
+count++             count++
+mutex.signal()      mutex.signal()
