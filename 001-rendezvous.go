@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-func ThreadA(aArrived chan int, bArrived <-chan int, finished chan int) {
+func ThreadA(aArrived chan<- int, bArrived <-chan int, finished chan<- int) {
 	fmt.Println("a1")
 	aArrived <- 1
 	<-bArrived
@@ -12,7 +12,7 @@ func ThreadA(aArrived chan int, bArrived <-chan int, finished chan int) {
 	finished <- 1
 }
 
-func ThreadB(aArrived <-chan int, bArrived chan int, finished chan int) {
+func ThreadB(aArrived <-chan int, bArrived chan<- int, finished chan<- int) {
 	fmt.Println("b1")
 	bArrived <- 1
 	<-aArrived
